@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">MoviesApp</string>
+    <string name="api_key">fbdbe8913cb31649453b2d955af83b9a</string>
+    <string name="more_info">More Info</string>
+    <string name="base_url">https://image.tmdb.org/t/p/</string>
+    <string name="small_size_image">w300</string>
+    <string name="discover_movie_base_url">https://api.themoviedb.org/3/discover/movie?language=en-US&amp;sort_by=popularity.desc&amp;include_adult=false&amp;include_video=true&amp;page=</string>
+    <string name="discover_show_base_url">https://api.themoviedb.org/3/discover/tv?language=en-US&amp;sort_by=popularity.desc&amp;include_adult=false&amp;include_video=true&amp;page=</string>
+    <string name="movie_id_key">movie_id_key</string>
+    <string name="yt_thumbnail_base_url">https://img.youtube.com/vi/</string>
+    <string name="yt_thumbnail_quality">/hqdefault.jpg</string>
+</resources>

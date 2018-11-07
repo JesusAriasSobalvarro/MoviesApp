@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MovieDetail">
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView
+        android:id="@+id/youtube_player_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"></com.pierfrancescosoffritti.androidyoutubeplayer.player.YouTubePlayerView>
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_trailer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_no_trailers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingVertical="24dp"
+                android:text="No Trailers Available"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/rv_trailer_list"
+                app:layout_constraintEnd_toEndOf="@+id/rv_trailer_list"
+                app:layout_constraintStart_toStartOf="@+id/rv_trailer_list"
+                app:layout_constraintTop_toTopOf="@+id/rv_trailer_list" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/rv_trailer_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rv_trailer_list" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_reviews_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_trailer_list"></android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:id="@+id/tv_no_reviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingVertical="24dp"
+                android:text="No Reviews Available"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/rv_reviews_list"
+                app:layout_constraintEnd_toEndOf="@+id/rv_reviews_list"
+                app:layout_constraintStart_toStartOf="@+id/rv_reviews_list"
+                app:layout_constraintTop_toTopOf="@+id/rv_reviews_list" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    <!--
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_trailer_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+        android:visibility="invisible"></android.support.v7.widget.RecyclerView>
+
+    <ProgressBar
+        android:id="@+id/pb_loading_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
+
+    <TextView
+        android:id="@+id/tv_no_trailers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="No Trailers Available"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_trailer_list"
+        app:layout_constraintEnd_toEndOf="@+id/rv_trailer_list"
+        app:layout_constraintStart_toStartOf="@+id/rv_trailer_list"
+        app:layout_constraintTop_toTopOf="@+id/rv_trailer_list"
+        android:visibility="invisible"
+        android:paddingVertical="24dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_reviews_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_trailer_list">
+    </android.support.v7.widget.RecyclerView>
+
+-->
+</LinearLayout>

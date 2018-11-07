@@ -1,0 +1,53 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_more_shows"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_add_button"
+        app:layout_constraintBottom_toBottomOf="@+id/pb_more_shows"
+        app:layout_constraintEnd_toEndOf="@+id/pb_more_shows"
+        app:layout_constraintStart_toStartOf="@+id/pb_more_shows"
+        app:layout_constraintTop_toTopOf="@+id/pb_more_shows">
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+        android:id="@+id/tv_more_shows_label"
+        android:text="More Shows"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginRight="70dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/iv_more_shows"
+        app:layout_constraintStart_toStartOf="@+id/iv_more_shows"
+        app:layout_constraintTop_toBottomOf="@+id/iv_more_shows" />
+
+    <ProgressBar
+        android:id="@+id/pb_more_shows"
+        style="?android:progressBarStyleHorizontal"
+        android:layout_width="125dp"
+        android:layout_height="123dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:max="10"
+        android:progress="0"
+        android:progressDrawable="@drawable/circle_show"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>
