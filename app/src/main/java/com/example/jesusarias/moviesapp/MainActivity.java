@@ -41,11 +41,12 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         mViewPager = findViewById(R.id.vp_tab_container);
-        mViewPager.setOffscreenPageLimit(3);
         setupPageViewer(mViewPager);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        mViewPager.setOffscreenPageLimit(3);
 
         sidebarIcon = findViewById(R.id.sidebar_icon);
         sidebarIcon.setOnClickListener(new View.OnClickListener() {

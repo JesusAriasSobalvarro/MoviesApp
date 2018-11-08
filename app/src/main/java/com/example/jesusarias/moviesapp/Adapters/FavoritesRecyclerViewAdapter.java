@@ -47,6 +47,10 @@ public class FavoritesRecyclerViewAdapter extends RecyclerView.Adapter<Favorites
                 .into(viewHolder.posterImage);
     }
 
+    public void clearList(){
+        mFavoritesList.clear();
+    }
+
     @Override
     public int getItemCount() {
         return mFavoritesList.size();

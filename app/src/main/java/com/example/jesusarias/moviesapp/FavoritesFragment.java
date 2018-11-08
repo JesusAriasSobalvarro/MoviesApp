@@ -21,6 +21,7 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.prefs.PreferenceChangeListener;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -35,6 +36,7 @@ public class FavoritesFragment extends Fragment {
     private RecyclerView mFavoritesRecyclerView;
     private FavoritesRecyclerViewAdapter mFavoritesAdapter;
     private Handler mHandler;
+    private SharedPreferences.OnSharedPreferenceChangeListener listener;
 
     @Nullable
     @Override
@@ -63,7 +65,33 @@ public class FavoritesFragment extends Fragment {
                 loadMovieInfo(parts[i]);
             }
         }
+
+        listener = new SharedPreferences.OnSharedPreferenceChangeListener() {
+            @Override
+            public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+               refreshFavorites();
+            }
+        };
+        pref.registerOnSharedPreferenceChangeListener(listener);
+
         return view;
+    }
+
+    public void refreshFavorites(){
+        mFavoritesAdapter.clearList();
+
+        SharedPreferences pref = getContext().getSharedPreferences("Movies", 0); // 0 - for private mode
+        final SharedPreferences.Editor editor = pref.edit();
+        String movieIds = pref.getString("MOVIE_ID", "");
+
+        if (movieIds != "") {
+            parts = movieIds.split(";");
+            String parsedIds = "";
+            for (int i = 0; i < parts.length; i++) {
+                parsedIds = parsedIds + parts[i] + "\n";
+                loadMovieInfo(parts[i]);
+            }
+        }
     }
 
     public void loadMovieInfo(String movieID) {
