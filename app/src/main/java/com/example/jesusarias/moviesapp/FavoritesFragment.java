@@ -125,6 +125,7 @@ public class FavoritesFragment extends Fragment {
                     });
 
                     Log.d("MOVIEINFO", myResponse);
+                    Log.d("MOVIEINFO12", myResponse);
                 }
             }
         });
