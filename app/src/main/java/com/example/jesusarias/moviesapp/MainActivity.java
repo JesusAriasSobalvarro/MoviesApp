@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new ShowsFragment(), "TV Shows");
         adapter.addFragment(new FavoritesFragment(), "Favorites");
         viewPager.setAdapter(adapter);
+        //Prueba
     }
 
 
