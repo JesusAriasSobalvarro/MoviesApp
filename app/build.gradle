@@ -10,7 +10,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 28
         versionCode computeVersionCode()
-        versionName System.getenv('BUILD_NUMBER').toString()
+        versionName "3.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
