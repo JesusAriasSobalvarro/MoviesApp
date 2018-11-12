@@ -10,8 +10,7 @@ android {
         minSdkVersion 17
         targetSdkVersion 28
         versionCode computeVersionCode()
-        def env = System.getenv()
-        versionName "1." + env['BUILD_NUMBER']
+        versionName computeVersionName()
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
