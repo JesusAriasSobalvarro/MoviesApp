@@ -9,8 +9,8 @@ android {
         applicationId "com.example.jesusarias.moviesapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode computerVersionCode()
-        versionName computerVersionName()
+        versionCode 3
+        versionName '2.0'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
