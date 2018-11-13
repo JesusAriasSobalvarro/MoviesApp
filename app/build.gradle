@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 ext.versionMajor = 1; ext.versionMinor = 4; ext.versionPatch = 0;
-ext.jenkinsBuildNumber = Integer.valueOf(System.getProperty("BUILD_NUMBER") ?:0)
+ext.buildNumber = System.getenv("BUILD_NUMBER") ?: "dev"
 
 android {
     compileSdkVersion 28
@@ -9,8 +9,8 @@ android {
         applicationId "com.example.jesusarias.moviesapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 3
-        versionName '2.0'
+        versionCode 1
+        versionName "0.1.$buildNumber"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -19,14 +19,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
-
-def computerVersionName(){
-    return "${versionMajor}.${versionMinor}.${versionPatch}"
-}
-
-def computerVersionCode(){
-    return (versionMajor * 1000_000) + (versionMinor * 10_000) + (versionPatch * 1_000) + jenkinsBuildNumber
 }
 
 dependencies {
