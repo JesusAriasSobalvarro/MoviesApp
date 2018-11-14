@@ -38,6 +38,9 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
+
+    api "com.disney.datg.android.sdk.novacorps.player:core:2.6.0"
+    implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
 }
 repositories {
     mavenCentral()
