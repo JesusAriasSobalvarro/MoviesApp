@@ -9,7 +9,7 @@ android {
         applicationId "com.example.jesusarias.moviesapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 2
+        versionCode
         versionName "2.0.1.$buildNumber"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -39,9 +39,8 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
 
-    api "com.disney.datg.android.sdk.novacorps.player:core:2.6.0"
-    implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
-    //Comment
+    //api "com.disney.datg.android.sdk.novacorps.player:core:2.6.0"
+    //implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
 }
 repositories {
     mavenCentral()
