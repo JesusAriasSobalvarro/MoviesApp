@@ -49,8 +49,8 @@ dependencies {
     implementation 'org.ajoberstar.grgit:grgit-core:3.0.0-rc.3'
     //implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
     /*
-        Comment 1 en develop branch
-        Comment 2 en develop branch
+        Comment 1 en develop develop
+        Comment 2 en develop develop
      */
 }
 repositories {
