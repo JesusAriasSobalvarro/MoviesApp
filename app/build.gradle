@@ -10,8 +10,8 @@ android {
         applicationId "com.example.jesusarias.moviesapp"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode
-        versionName "2.0.1.$buildNumber"
+        versionCode gitVersionCodeTime
+        versionName gitVersionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -19,6 +19,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -42,9 +47,8 @@ dependencies {
 
 
     implementation 'org.ajoberstar.grgit:grgit-core:3.0.0-rc.3'
-    //api "com.disney.datg.android.sdk.novacorps.player:core:2.6.0"
     //implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
-    //Comentario de prueba
+    //Comentario hecho en branch develop... de prueba
 }
 repositories {
     mavenCentral()
