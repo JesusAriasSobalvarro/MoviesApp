@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply from: "$project.rootDir/script-git-version.gradle"
 ext.versionMajor = 1; ext.versionMinor = 4; ext.versionPatch = 0;
 ext.buildNumber = System.getenv("BUILD_NUMBER") ?: "dev"
 
@@ -39,6 +40,8 @@ dependencies {
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:8.0.1'
 
+
+    implementation 'org.ajoberstar.grgit:grgit-core:3.0.0-rc.3'
     //api "com.disney.datg.android.sdk.novacorps.player:core:2.6.0"
     //implementation "com.disney.datg.android.sdk.novacorps.player:chromecast-sender:2.6.0"
     //Comentario de prueba
