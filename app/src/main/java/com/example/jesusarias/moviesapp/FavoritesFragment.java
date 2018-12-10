@@ -32,7 +32,7 @@ import okhttp3.Response;
 public class FavoritesFragment extends Fragment {
 
     String[] parts;
-
+    //Comment 1
     private RecyclerView mFavoritesRecyclerView;
     private FavoritesRecyclerViewAdapter mFavoritesAdapter;
     private Handler mHandler;
